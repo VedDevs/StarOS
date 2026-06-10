@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  height: 100vh;
+
+  background-image: url("assets/images.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.2);
+
+  color: white;
+  padding: 8px 0;
+}
+
+.logo,
+.status,
+.time {
+  margin: 0 16px;
+  padding: 6px 14px;
+
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
+.logo {
+  font-weight: bold;
+}
+
+#myimg {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 32px;
+}
+.closebutton {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  background-color: #ec6b5e;
+  border-radius: 16px;
+  border: solid 1px rgba(0, 0, 0, 0.25);
+  margin-left: 6px;
+}
+.window {
+  border: solid;
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 180px);
+  backdrop-filter: blur(4px);
+  background-color: rgba(0, 0, 0, 0.125);
+}
+#meopen {
+  padding-left: 20px;
+  padding-top: 100px;
+  padding-bottom: 20px;
+  cursor: pointer;
+}

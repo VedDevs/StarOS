@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="topbar">
+        <p class="logo">WebOS</p>
+        <p style="cursor: pointer" id="welcomeopen">ThomasOS</p>
+        <p class="status">🌅 Serenity Mode</p>
+        <p id="timeElement" class="time">Loading...</p>
+    </div>
+
+    <div id="desktopApps">
+        <div id="meopen">
+            <img src="assets/Me&Me.png" alt="Me&Me" style="border-radius: 10px;">
+            <!-- <p style="background-image: url(assets/Me&Me.png); height: 60px; width: 60px;"></p> -->
+            <!-- <p>Welcome</p> -->
+        </div>
+
+    </div>
+
+
+
+    <div class="window" id="welcome">
+        <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
+            <div class="closebutton" id="welcomeclose"></div>
+
+            <p style="margin: 0px; color: #fff; font-weight: 500">Welcome</p>
+            <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+        </div>
+        <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+            <img src="assets/myimg.JPG" style="width: 64px; height: 64px; border-radius: 32px; object-fit: cover;" />
+            <h1 style="margin: 4px;">thomasOS</h1>
+            <p style="margin: 0px;">
+                <dfn>ThomasOS</dfn> is a feature-limited <abbr title="Operating System">OS</abbr> to answer the <br />
+                unanswerable
+                question of <code>"who is Thomas?"</code>
+            </p>
+        </div>
+    </div>
+    <div class="window" id="Me" style="display: none;">
+        <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
+            <div class="closebutton" id="meclose"></div>
+
+            <p style="margin: 0px; color: #fff; font-weight: 500;">About Me
+            </p>
+            <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+        </div>
+        <div id="notesContent"
+            style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
+            <img src="assets/myimg.JPG" style="width: 64px; height: 64px; border-radius: 32px; object-fit: cover;" />
+            <h1 style="margin: 4px;">thomasOS</h1>
+            <p style="margin: 0px;">
+                <dfn>ThomasOS</dfn> is a feature-limited <abbr title="Operating System">OS</abbr> to answer the <br />
+                unanswerable
+                question of <code>"who is Thomas?"</code>
+            </p>
+        </div>
+    </div>
+
+    <div class="window" id="wikipedia" style="display: none;">
+        <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
+            <div class="closebutton" id="meclose"></div>
+
+            <p style="margin: 0px; color: #fff; font-weight: 500;">Wikipedia
+            </p>
+            <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+        </div>
+        <div style="background-color: #fff; margin: 6px; border-radius: 12px; padding: 16px; height: 500px; width: 400px;">
+            <iframe id="browserframe" src="https://wikipedia.org" style="margin-top:8px; flex:1; border:none; height: 500px; width: 400px;">
+            </iframe>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    function updateTime() {
+        document.getElementById("timeElement").innerHTML =
+            new Date().toLocaleString();
+    }
+
+    updateTime();
+    setInterval(updateTime, 1000);
+</script>
+<script src="app.js"></script>
+</body>
+
+</html>
