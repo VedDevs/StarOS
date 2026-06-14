@@ -2,28 +2,65 @@ body {
   margin: 0;
   height: 100vh;
 
-  background-image: url("assets/images.jpeg");
+  background-image: url(assets/StarOS.png);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 
   font-family: Helvetica, Arial, sans-serif;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* body::before {
+  content: "";
+
+  position: fixed;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(0,0,0,0.15),
+      rgba(0,0,0,0.25)
+    );
+
+  pointer-events: none;
+} */
+* {
+  transition:
+    background-color 0.2s,
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+
 
 .topbar {
   position: absolute;
-  top: 0;
-  width: 100%;
+  top: 12px;
+  left: 12px;
+  width: calc(100% - 24px);
+  padding: 12px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  backdrop-filter: blur(12px);
-  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 16px;
 
   color: white;
-  padding: 8px 0;
+
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.2);
 }
 
 .logo,
@@ -47,28 +84,146 @@ body {
   border-radius: 32px;
 }
 .closebutton {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
+
+  background: #ff5f57;
+
+  border-radius: 50%;
+
+  margin-left: 10px;
+
   cursor: pointer;
-  background-color: #ec6b5e;
-  border-radius: 16px;
-  border: solid 1px rgba(0, 0, 0, 0.25);
-  margin-left: 6px;
 }
 .window {
-  border: solid;
+  position: absolute;
+
   display: flex;
   flex-direction: column;
-  border-radius: 16px;
-  position: absolute;
+
   top: calc(50% - 90px);
   left: calc(50% - 180px);
-  backdrop-filter: blur(4px);
-  background-color: rgba(0, 0, 0, 0.125);
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+
+  border: 1px solid rgba(255,255,255,0.15);
+
+  box-shadow:
+    0 10px 40px rgba(0,0,0,0.3);
 }
-#meopen {
-  padding-left: 20px;
-  padding-top: 100px;
-  padding-bottom: 20px;
+#meopen,#osIopen,#contactsopen,#WeatherOpen,
+#wikiopen {
+  width: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 10px;
+
+  border-radius: 12px;
+
+  transition: 0.2s;
+
   cursor: pointer;
+}
+#meopen:hover,
+#wikiopen:hover,
+#contactsopen:hover,
+#WeatherOpen:hover,
+#osIopen:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+#desktopApps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  margin-top: 90px;
+  margin-left: 20px;
+}
+#desktopApps img {
+  width: 64px;
+  height: 64px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 4px 16px rgba(0,0,0,0.3);
+}
+
+#WeatherContent {
+    background: white;
+    margin: 6px;
+    border-radius: 12px;
+    width: 360px;
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#WeatherContent h1 {
+    margin: 0;
+}
+
+#CityEntry {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+#SearchWeather {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+
+    background: #4a90e2;
+    color: white;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#SearchWeather:hover {
+    transform: scale(1.02);
+}
+
+#WeatherCard {
+    margin-top: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #5ea8ff,
+        #88c8ff
+    );
+
+    color: white;
+
+    border-radius: 16px;
+    padding: 20px;
+
+    text-align: center;
+}
+
+#WeatherCard h2 {
+    margin: 0;
+}
+
+#tempCity {
+    font-size: 48px;
+    margin: 10px 0;
+}
+
+#conditionCity {
+    font-size: 18px;
+    opacity: 0.9;
 }

@@ -4,30 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebOS</title>
+    <title>StarOS</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/OsInfo.png" type="image/x-icon">
 </head>
 
 <body>
 
     <div class="topbar">
-        <p class="logo">StarOS</p>
-        <p style="cursor: pointer" id="welcomeopen">ThomasOS</p>
-        <p class="status">🌅 Serenity Mode</p>
+        <p class="logo">WebOS</p>
+        <p class="status">⭐ Star Mode</p>
         <p id="timeElement" class="time">Loading...</p>
     </div>
 
     <div id="desktopApps">
+        <div id="osIopen">
+            <img id="welcomeopen" src="assets/OsInfo.png" alt="OS-Info" style="border-radius: 10px;">
+            <!-- <p style="cursor: pointer" id="welcomeopen">ThomasOS</p> -->
+        </div>
         <div id="meopen">
             <img src="assets/Me&Me.png" alt="Me&Me" style="border-radius: 10px;">
             <!-- <p style="background-image: url(assets/Me&Me.png); height: 60px; width: 60px;"></p> -->
             <!-- <p>Welcome</p> -->
         </div>
+        <div id="wikiopen">
+            <img src="assets/Wikipedia.png" alt="Me&Me" style="border-radius: 10px;">
+            <!-- <p style="background-image: url(assets/Me&Me.png); height: 60px; width: 60px;"></p> -->
+            <!-- <p>Welcome</p> -->
+        </div>
+        <div id="contactsopen">
+            <img src="assets/contacts.png" alt="Contacts" style="border-radius:10px;">
+        </div>
+        <div id="WeatherOpen">
+            <img src="assets/Weather 1.png" alt="Weather">
+            <!-- <p>Weather</p> -->
+        </div>
 
     </div>
 
 
-
+    <!-- StarOS -->
     <div class="window" id="welcome">
         <div id="welcomeheader"
             style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
@@ -38,14 +54,13 @@
         </div>
         <div style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
             <img src="assets/myimg.JPG" style="width: 64px; height: 64px; border-radius: 32px; object-fit: cover;" />
-            <h1 style="margin: 4px;">thomasOS</h1>
+            <h1 style="margin: 4px;">StarOS</h1>
             <p style="margin: 0px;">
-                <dfn>ThomasOS</dfn> is a feature-limited <abbr title="Operating System">OS</abbr> to answer the <br />
-                unanswerable
-                question of <code>"who is Thomas?"</code>
+                <dfn>StarOS</dfn> is a Just a DUMB <abbr title="Operating System" style="font-style:oblique;">OS</abbr>
             </p>
         </div>
     </div>
+    <!-- Me&Me -->
     <div class="window" id="Me" style="display: none;">
         <div id="welcomeheader"
             style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
@@ -58,41 +73,70 @@
         <div id="notesContent"
             style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px;">
             <img src="assets/myimg.JPG" style="width: 64px; height: 64px; border-radius: 32px; object-fit: cover;" />
-            <h1 style="margin: 4px;">thomasOS</h1>
+            <h1 style="margin: 4px;">StarOS</h1>
             <p style="margin: 0px;">
-                <dfn>ThomasOS</dfn> is a feature-limited <abbr title="Operating System">OS</abbr> to answer the <br />
-                unanswerable
-                question of <code>"who is Thomas?"</code>
+                <dfn>StarOS</dfn> is a just DUMB <abbr title="Operating System">OS</abbr>
             </p>
         </div>
     </div>
-
+    <!-- Wikipedia -->
     <div class="window" id="wikipedia" style="display: none;">
         <div id="welcomeheader"
             style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
-            <div class="closebutton" id="meclose"></div>
+            <div class="closebutton" id="wikiclose"></div>
 
             <p style="margin: 0px; color: #fff; font-weight: 500;">Wikipedia
             </p>
             <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
         </div>
-        <div style="background-color: #fff; margin: 6px; border-radius: 12px; padding: 16px; height: 500px; width: 400px;">
-            <iframe id="browserframe" src="https://wikipedia.org" style="margin-top:8px; flex:1; border:none; height: 500px; width: 400px;">
+        <div
+            style="background-color: #fff; margin: 6px; border-radius: 12px; padding: 16px; height: 500px; width: 400px;">
+            <iframe id="browserframe" src="https://wikipedia.org"
+                style="margin-top:8px; flex:1; border:none; height: 500px; width: 400px;">
             </iframe>
+        </div>
+    </div>
+    <!-- Contacts -->
+    <div class="window" id="Contacts" style="display: none;">
+        <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
+            <div class="closebutton" id="contactsClose"></div>
+
+            <p style="margin: 0px; color: #fff; font-weight: 500;">Contacts
+            </p>
+            <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+        </div>
+        <div id="ContactsContent"
+            style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px; display: flexbox; justify-content:center;">
+            <h1>Contact Me</h1>
+            <p>Email - qbit.ved@gmail.com</p>
+            <p>Phone no - +91 80....Why Do You Want to Know???</p>
+            <p></p>
+        </div>
+    </div>
+    <!-- Weather -->
+    <div class="window" id="Weather" style="display: none;">
+        <div id="welcomeheader"
+            style="width: 100%; display: flex; align-items: center; cursor: grab; justify-content: space-between; margin-top: 8px;">
+            <div class="closebutton" id="WeatherClose"></div>
+
+            <p style="margin: 0px; color: #fff; font-weight: 500;">Weather
+            </p>
+            <div style="width: 16px; margin-right: 6x; height: 16px;"></div>
+        </div>
+        <div id="WeatherContent"
+            style="background-color: #fff; margin: 6px; border-radius: 12px; width: 360px; padding: 16px; display: flexbox; justify-content:center;">
+            <input type="text" id="CityEntry" placeholder="Enter city...">
+            <button type="button" id="SearchWeather">Search</button>
+
+            <h2 id="weatherCity">Search your city</h2>
+            <h1 id="tempCity">--°C</h1>
+            <p id="conditionCity">---</p>
         </div>
     </div>
 
 </body>
 
-<script>
-    function updateTime() {
-        document.getElementById("timeElement").innerHTML =
-            new Date().toLocaleString();
-    }
-
-    updateTime();
-    setInterval(updateTime, 1000);
-</script>
 <script src="app.js"></script>
 </body>
 
