@@ -1,23 +1,22 @@
-# ![StarOS]() StarOS
+![StarOS](assets/OsInfo.png) 
+# StarOS
 
 A browser-based desktop environment built with HTML, CSS, and JavaScript.
 
 StarOS is a fun project that recreates the feel of a desktop operating system entirely inside a web browser. It features draggable windows, desktop applications, a live clock, and a growing collection of built-in apps.
 
-The project was created as a way to explore frontend web development while building something interactive and enjoyable.
-
 ## 🚀 Features
 
-* 🖱️ Draggable windows
-* 🪟 Open and close window system
-* ⭐ Star Notes application
-* 📖 Wikipedia application
-* 📇 Contacts application
-* 🌤️ Weather application
-* 🕒 Live clock
-* 🎨 Custom wallpaper support
-* 💻 Desktop-style interface
-* 📱 Runs directly in the browser
+* Draggable windows
+* Open and close window system
+*  Star Notes application
+*  Wikipedia application
+*  Contacts application
+*  Weather application
+*  Live clock
+*  Custom wallpaper support
+*  Desktop-style interface
+*  Runs directly in the browser
 
 ## 🛠️ Built With
 
@@ -25,21 +24,8 @@ The project was created as a way to explore frontend web development while build
 * CSS3
 * JavaScript (Vanilla JS)
 
-No frameworks. No libraries. Just plain web technologies.
+Just plain web technologies.
 
-
-## 🎯 Project Goals
-
-The goal of StarOS is not to create a real operating system, but to learn web development concepts by simulating the experience of using one.
-
-This project explores:
-
-* DOM manipulation
-* Window management
-* Event handling
-* Application architecture
-* UI/UX design
-* Browser APIs
 
 ## 📂 Current Applications
 
@@ -71,7 +57,7 @@ Allows users to search for weather information by city.
 * 🌙 Dark Mode
 * 🔍 Search System
 
-## 🏃 Running Locally
+## Running Locally
 
 1. Clone the repository
 
@@ -93,8 +79,6 @@ That's it!
 
 Suggestions, bug reports, and improvements are welcome.
 
-Feel free to fork the project and experiment with your own apps and ideas.
-
 ## 👨‍💻 Author
 
 Vedant
@@ -102,9 +86,6 @@ Vedant
 GitHub:
 https://github.com/VedDevs
 
-## 📜 License
-
-This project is open source and available under the MIT License.
 
 ---
 
