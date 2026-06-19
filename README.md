@@ -1,4 +1,4 @@
-# ⭐ StarOS
+# ![StarOS]() StarOS
 
 A browser-based desktop environment built with HTML, CSS, and JavaScript.
 
